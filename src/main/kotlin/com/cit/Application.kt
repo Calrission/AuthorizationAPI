@@ -5,6 +5,8 @@ import com.cit.common.CodeResponse
 import com.cit.common.ModelAnswer
 import com.cit.common.Validation
 import com.cit.database.DatabaseFactory
+import com.cit.database.PATH_LOCAL_PROPERTY
+import com.cit.database.getLocalProperty
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import com.cit.plugins.*
@@ -20,8 +22,11 @@ import io.ktor.server.util.*
 import org.slf4j.event.Level
 import kotlin.reflect.KClass
 
-fun main() {
-    embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
+fun main(args: Array<String>) {
+
+    PATH_LOCAL_PROPERTY = if (args.isNotEmpty()) args[0] else "local.properties"
+
+    embeddedServer(Netty, port = (getLocalProperty("port") as String).toInt(), host = "0.0.0.0") {
         install(ContentNegotiation) {
             json()
         }
