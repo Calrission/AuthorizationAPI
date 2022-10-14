@@ -11,11 +11,11 @@ import java.io.File
 object DatabaseFactory{
     fun initDataBase(){
         val driverClassName = "org.postgresql.Driver"
-        val host = getLocalProperty("host")
-        val port = getLocalProperty("port")
-        val password = getLocalProperty("password") as String
-        val databaseName = getLocalProperty("database")
-        val user = getLocalProperty("user") as String
+        val host = "192.168.1.68"
+        val port = "5432"
+        val password = "Aa!135"
+        val databaseName = "postgres"
+        val user = "lyubimov"
 
         val url = "jdbc:postgresql://$host:$port/$databaseName"
         val database = Database.connect(url, driverClassName, user, password)
