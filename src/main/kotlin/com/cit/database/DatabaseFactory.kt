@@ -11,7 +11,7 @@ import java.io.File
 object DatabaseFactory{
     fun initDataBase(){
         val driverClassName = "org.postgresql.Driver"
-        val host = "192.168.1.68"
+        val host = "0.0.0.0"
         val port = "5432"
         val password = "Aa!135"
         val databaseName = "postgres"
@@ -32,16 +32,4 @@ object DatabaseFactory{
     suspend fun <T> pushQuery(block: suspend () -> T): T{
         return newSuspendedTransaction(Dispatchers.IO) { block() }
     }
-}
-
-fun getLocalProperty(key: String, file: String = "local.properties"): Any {
-    val properties = java.util.Properties()
-    val localProperties = File(file)
-    if (localProperties.isFile) {
-        java.io.InputStreamReader(java.io.FileInputStream(localProperties), Charsets.UTF_8).use { reader ->
-            properties.load(reader)
-        }
-    } else error("File from not found")
-
-    return properties.getProperty(key)
 }
