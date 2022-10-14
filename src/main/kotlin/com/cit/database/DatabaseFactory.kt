@@ -11,7 +11,7 @@ import java.io.File
 object DatabaseFactory{
     fun initDataBase(){
         val driverClassName = "org.postgresql.Driver"
-        val host = "0.0.0.0"
+        val host = "192.168.1.68"
         val port = "5432"
         val password = "Aa!135"
         val databaseName = "postgres"
