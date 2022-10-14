@@ -6,12 +6,10 @@ import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
 import org.jetbrains.exposed.sql.transactions.transaction
-import java.io.File
-
 object DatabaseFactory{
     fun initDataBase(){
         val driverClassName = "org.postgresql.Driver"
-        val host = "0.0.0.0"
+        val host = "95.31.130.149"
         val port = "5432"
         val password = "Aa!135"
         val databaseName = "postgres"

@@ -2,7 +2,9 @@ package com.cit.common
 
 import com.cit.common.CodeResponse.Companion.toCodeResponse
 import io.ktor.http.*
+import kotlinx.serialization.Serializable
 
+@Serializable
 class ModelAnswer <T>{
 
     val codeResponse: CodeResponse

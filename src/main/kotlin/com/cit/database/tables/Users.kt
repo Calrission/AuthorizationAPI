@@ -4,8 +4,9 @@ import com.cit.common.CodeTitle
 import com.cit.common.Validation
 import com.cit.common.validateEmail
 import com.cit.common.validatePassword
+import kotlinx.serialization.Serializable
 import org.jetbrains.exposed.sql.Table
-
+@Serializable
 data class LoginBody(
     val email: String,
     val password: String
@@ -18,7 +19,7 @@ data class LoginBody(
         return Pair(true, null)
     }
 }
-
+@Serializable
 data class SignUpBody(
     val login: String,
     val password: String,
@@ -39,7 +40,7 @@ data class SignUpBody(
         return WithoutIdUserRow(login, password, email, "")
     }
 }
-
+@Serializable
 data class WithoutIdUserRow(
     val login: String,
     val password: String,
@@ -56,11 +57,11 @@ data class UserRow(
 ){
     fun toSafe(): UserSafe = UserSafe(id, login)
 }
-
+@Serializable
 data class Token(
     val token: String
 )
-
+@Serializable
 data class UserSafe(
     val id: Int,
     val login: String

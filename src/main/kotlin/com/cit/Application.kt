@@ -9,7 +9,7 @@ import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import com.cit.plugins.*
 import io.ktor.http.*
-import io.ktor.serialization.gson.*
+import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
 import io.ktor.server.plugins.callloging.*
 import io.ktor.server.plugins.contentnegotiation.*
@@ -23,7 +23,7 @@ import kotlin.reflect.KClass
 fun main() {
     embeddedServer(Netty, port = 8080, host = "0.0.0.0") {
         install(ContentNegotiation) {
-            gson()
+            json()
         }
         install(DoubleReceive)
         install(CallLogging){

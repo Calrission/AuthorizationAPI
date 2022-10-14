@@ -1,8 +1,9 @@
 package com.cit.common
 
 import io.ktor.http.*
+import kotlinx.serialization.Serializable
 
-
+@Serializable
 class CodeResponse {
     val code: Int
     val description: String

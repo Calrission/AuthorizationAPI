@@ -9,6 +9,7 @@ val postgresqlVersion: String by project
 plugins {
     application
     kotlin("jvm") version "1.7.20"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.7.20"
     id("io.ktor.plugin") version "2.1.2"
 }
 
@@ -34,8 +35,8 @@ repositories {
 dependencies {
     implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
-    implementation("io.ktor:ktor-serialization-gson-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-double-receive-jvm:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("io.ktor:ktor-server-call-logging:$ktor_version")
