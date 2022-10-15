@@ -1,8 +1,6 @@
 package com.cit
 
 import com.cit.common.CallbackCodeResponse
-import com.cit.common.CodeResponse
-import com.cit.common.ModelAnswer
 import com.cit.common.Validation
 import com.cit.database.DatabaseFactory
 import com.cit.database.PATH_LOCAL_PROPERTY
@@ -42,29 +40,20 @@ fun main(args: Array<String>) {
     }.start(wait = true)
 }
 
-suspend fun ApplicationCall.respondExceptionError(e: Exception){
-    respondAnswer(ModelAnswer<String>(CodeResponse(500, e.message ?: e.localizedMessage ?: e.toString())))
+suspend fun ApplicationCall.respondError(message: String){
+    respondError(HttpStatusCode.BadRequest.value, message)
 }
 
-suspend fun ApplicationCall.respondNullExceptionErrorQueryParameters(e: NullPointerException, parameters: List<String>){
-    val message = "$e - check this field: $parameters"
-    respondAnswer(ModelAnswer<String>(CodeResponse(HttpStatusCode.BadRequest, message)))
+suspend fun ApplicationCall.respondError(code: Int, message: String){
+    respond(HttpStatusCode(code, "Error"), message)
 }
 
-suspend inline fun <reified T> ApplicationCall.respondAnswer(model: ModelAnswer<T>){
-    respond(HttpStatusCode.OK, model)
+suspend fun ApplicationCall.respondError(e: Exception){
+    respondError(e.localizedMessage ?: e.message ?: "Unknown error")
 }
 
-suspend inline fun <reified T> ApplicationCall.respondAnswer(model: T){
-    respond(HttpStatusCode.OK, ModelAnswer(model))
-}
-
-suspend inline fun ApplicationCall.respondCodeResponse(codeResponse: CodeResponse){
-    respondAnswer(ModelAnswer<String>(codeResponse = codeResponse))
-}
-
-suspend inline fun ApplicationCall.respondCodeResponse(callbackCodeResponse: CallbackCodeResponse){
-    respondCodeResponse(callbackCodeResponse.codeResponse)
+suspend fun ApplicationCall.respondError(callbackCodeResponse: CallbackCodeResponse){
+    respondError(callbackCodeResponse.code, callbackCodeResponse.message)
 }
 
 suspend fun <T : Validation> ApplicationCall.receiveAndValidate(type: KClass<T>): T?{
@@ -72,12 +61,18 @@ suspend fun <T : Validation> ApplicationCall.receiveAndValidate(type: KClass<T>)
         val body = receive(type)
         val validateBody = body.validate()
         if (!validateBody.first) {
-            respondCodeResponse(CodeResponse(HttpStatusCode.BadRequest, validateBody.second!!))
+            respondError(validateBody.second!!)
             return null
         }
         return body
     }catch (e: java.lang.Exception){
-        respondExceptionError(e)
+        respondError(e.message!!)
         return null
     }
 }
+
+suspend fun ApplicationCall.respondNullExceptionErrorQueryParameters(e: Exception, params: List<String>) {
+    respondError("${e.message ?: "Unknown"} - check ${params.joinToString(" , "){ it }}")
+}
+
+

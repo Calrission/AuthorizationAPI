@@ -1,42 +1,47 @@
 package com.cit.database.controllers
 
 import com.cit.common.CallbackCodeResponse
-import com.cit.common.ModelAnswer
 import com.cit.database.tables.*
+import com.cit.respondError
+import io.ktor.server.application.*
+import io.ktor.server.response.*
 import org.jetbrains.exposed.sql.and
 
 class UserController {
     private val daoUser = DAOUsers()
 
-    suspend fun signIn(body: LoginBody): ModelAnswer<Token>{
+    suspend fun signIn(body: LoginBody, applicationCall: ApplicationCall){
         var user = daoUser.selectSingle { (Users.email eq body.email) and (Users.password eq body.password) }
         return if (user == null){
-            ModelAnswer(CallbackCodeResponse.USER_NOT_FOUND)
+            applicationCall.respondError(CallbackCodeResponse.USER_NOT_FOUND)
         }else{
             user = daoUser.generateNewUUID(user.id)
-            return if (user == null){
-                ModelAnswer(CallbackCodeResponse.NEW_TOKEN_NOT_INSERT)
+            if (user == null){
+                applicationCall.respondError(CallbackCodeResponse.NEW_TOKEN_NOT_INSERT)
             }else {
-                ModelAnswer(Token(user.token))
+                applicationCall.respond(Token(user.token))
             }
         }
     }
 
-    suspend fun signUp(body: SignUpBody): ModelAnswer<String?>{
+    suspend fun signUp(body: SignUpBody, applicationCall: ApplicationCall){
         if (daoUser.checkExist { Users.email eq body.email }){
-            return ModelAnswer(CallbackCodeResponse.EMAIL_ALREADY_USE)
+            applicationCall.respondError(CallbackCodeResponse.EMAIL_ALREADY_USE)
         }
         val user = daoUser.insert(body.toWithoutIdUserRow())
-        return ModelAnswer(if (user != null) "Успешная регистрация" else null)
+        if (user != null)
+            applicationCall.respondText("Успешная регистрация")
+        else
+            applicationCall.respondError(CallbackCodeResponse.USER_NOT_CREATED)
     }
 
-    suspend fun getUser(id: Int): ModelAnswer<UserSafe?>{
+    suspend fun getUser(id: Int): UserSafe?{
         val user = daoUser.selectSingle { Users.id eq id }
-        return ModelAnswer(user?.toSafe())
+        return user?.toSafe()
     }
 
-    suspend fun getUser(token: String): ModelAnswer<UserSafe?>{
+    suspend fun getUser(token: String): UserSafe?{
         val user = daoUser.selectSingle { Users.token eq token }
-        return ModelAnswer(user?.toSafe())
+        return user?.toSafe()
     }
 }

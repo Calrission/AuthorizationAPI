@@ -6,6 +6,7 @@ import com.cit.database.tables.LoginBody
 import com.cit.database.tables.SignUpBody
 import io.ktor.server.routing.*
 import io.ktor.server.application.*
+import io.ktor.server.response.*
 
 fun Application.configureRouting() {
 
@@ -16,11 +17,10 @@ fun Application.configureRouting() {
             try{
                 val body = call.receiveAndValidate(LoginBody::class)
                 if (body != null) {
-                    val result = userController.signIn(body)
-                    call.respondAnswer(result)
+                    userController.signIn(body, call)
                 }
             }catch (e: Exception){
-                call.respondExceptionError(e)
+                call.respondError(e)
             }
         }
 
@@ -28,35 +28,32 @@ fun Application.configureRouting() {
             try{
                 val body = call.receiveAndValidate(SignUpBody::class)
                 if (body != null) {
-                    val result = userController.signUp(body)
-                    call.respondAnswer(result)
+                    userController.signUp(body, call)
                 }
             }catch (e: Exception){
-                call.respondExceptionError(e)
+                call.respondError(e)
             }
         }
 
         get("getUser"){
             try{
                 val id = call.request.queryParameters["id"]!!.toInt()
-                val result = userController.getUser(id)
-                call.respondAnswer(result)
+                userController.getUser(id)
             }catch (e: NullPointerException){
                 call.respondNullExceptionErrorQueryParameters(e, listOf("id"))
             }catch (e: Exception){
-                call.respondExceptionError(e)
+                call.respondError(e)
             }
         }
 
         get("token/getUser"){
             try{
                 val token = call.request.queryParameters["token"]!!.toString()
-                val result = userController.getUser(token)
-                call.respondAnswer(result)
+                userController.getUser(token)
             }catch (e: NullPointerException){
                 call.respondNullExceptionErrorQueryParameters(e, listOf("token"))
             }catch (e: Exception){
-                call.respondExceptionError(e)
+                call.respondError(e)
             }
         }
     }
