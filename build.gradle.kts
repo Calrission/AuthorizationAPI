@@ -24,7 +24,7 @@ application {
 
 ktor {
     fatJar {
-        archiveFileName.set("auth-test.jar")
+        archiveFileName.set("auth-test-simple.jar")
     }
 }
 
