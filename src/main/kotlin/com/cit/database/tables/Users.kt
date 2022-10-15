@@ -59,7 +59,8 @@ data class UserRow(
 }
 @Serializable
 data class Token(
-    val token: String
+    val token: String? = null,
+    val error: String? = null
 )
 @Serializable
 data class UserSafe(

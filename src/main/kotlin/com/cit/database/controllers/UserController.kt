@@ -13,11 +13,11 @@ class UserController {
     suspend fun signIn(body: LoginBody, applicationCall: ApplicationCall){
         var user = daoUser.selectSingle { (Users.email eq body.email) and (Users.password eq body.password) }
         return if (user == null){
-            applicationCall.respondError(CallbackCodeResponse.USER_NOT_FOUND)
+            applicationCall.respond(Token(error=CallbackCodeResponse.USER_NOT_FOUND.message))
         }else{
             user = daoUser.generateNewUUID(user.id)
             if (user == null){
-                applicationCall.respondError(CallbackCodeResponse.NEW_TOKEN_NOT_INSERT)
+                applicationCall.respond(Token(error=CallbackCodeResponse.NEW_TOKEN_NOT_INSERT.message))
             }else {
                 applicationCall.respond(Token(user.token))
             }
