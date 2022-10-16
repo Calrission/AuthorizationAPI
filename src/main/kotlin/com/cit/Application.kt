@@ -53,7 +53,7 @@ suspend fun ApplicationCall.respondError(e: Exception){
 }
 
 suspend fun ApplicationCall.respondError(callbackCodeResponse: CallbackCodeResponse){
-    respondError(callbackCodeResponse.code, callbackCodeResponse.message)
+    respondError(200, callbackCodeResponse.message)
 }
 
 suspend fun <T : Validation> ApplicationCall.receiveAndValidate(type: KClass<T>): T?{
