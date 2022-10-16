@@ -41,7 +41,7 @@ fun main(args: Array<String>) {
 }
 
 suspend fun ApplicationCall.respondError(message: String){
-    respondError(HttpStatusCode.BadRequest.value, message)
+    respondError(200, message)
 }
 
 suspend fun ApplicationCall.respondError(code: Int, message: String){
@@ -53,7 +53,7 @@ suspend fun ApplicationCall.respondError(e: Exception){
 }
 
 suspend fun ApplicationCall.respondError(callbackCodeResponse: CallbackCodeResponse){
-    respondError(200, callbackCodeResponse.message)
+    respondError(callbackCodeResponse.message)
 }
 
 suspend fun <T : Validation> ApplicationCall.receiveAndValidate(type: KClass<T>): T?{
