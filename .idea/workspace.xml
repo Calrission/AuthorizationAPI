@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="48cec73d-6b63-4661-940c-352bb5dcabca" name="Changes" comment="update code error" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="com.cit.auth-for-lern" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="com.cit.auth-for-lern" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="com.cit.auth-for-lern" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="ktor" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="deploy-simple" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2G5xxuoc4dY2O6TBr9iO1bb7vKp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Artemii/KotlinProjects/auth-for-lern-simple&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Artemii\KotlinProjects\auth-for-lern-simple" />
+      <recent name="C:\Users\Artemii\KotlinProjects\auth-for-lern\build\libs" />
+      <recent name="C:\Users\Artemii\KotlinProjects\auth-for-lern\src\main\kotlin\com\cit\database" />
+      <recent name="C:\Users\Artemii\KotlinProjects\auth-for-lern\src\main\kotlin\com\cit\common" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Artemii\KotlinProjects\auth-for-lern-simple" />
+      <recent name="C:\Users\Artemii\KotlinProjects\auth-for-lern" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.auth-for-lern [buildFatJar]">
+    <configuration name="auth-for-lern [buildFatJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildFatJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="auth-for-lern [runFatJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runFatJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cit.ApplicationKt" />
+      <module name="com.cit.auth-for-lern.main" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\Artemii\KotlinProjects\auth-for-lern-simple\local.properties" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.auth-for-lern [buildFatJar]" />
+      <item itemvalue="Gradle.auth-for-lern [runFatJar]" />
+      <item itemvalue="Kotlin.ApplicationKt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.ApplicationKt" />
+        <item itemvalue="Gradle.auth-for-lern [runFatJar]" />
+        <item itemvalue="Gradle.auth-for-lern [buildFatJar]" />
+        <item itemvalue="Gradle.auth-for-lern [buildFatJar]" />
+        <item itemvalue="Kotlin.ApplicationKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48cec73d-6b63-4661-940c-352bb5dcabca" name="Changes" comment="" />
+      <created>1665692516610</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665692516610</updated>
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1665735772090</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665735772090</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add jar">
+      <created>1665736092479</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665736092479</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add local.properties">
+      <created>1665740159928</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665740159928</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update jar">
+      <created>1665741113922</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665741113922</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update local.properties">
+      <created>1665746107055</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665746107055</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update">
+      <created>1665746380779</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1665746380779</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update jars">
+      <created>1665746517263</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665746517263</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update">
+      <created>1665746736891</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665746736891</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <created>1665747395689</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665747395689</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update">
+      <created>1665747544269</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665747544269</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update">
+      <created>1665748111537</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665748111537</updated>
+    </task>
+    <task id="LOCAL-00012" summary="remove local.properties">
+      <created>1665748534669</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1665748534669</updated>
+    </task>
+    <task id="LOCAL-00013" summary="deploy jar">
+      <created>1665749409386</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1665749409386</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change serialization">
+      <created>1665751207325</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1665751207326</updated>
+    </task>
+    <task id="LOCAL-00015" summary="new deploy">
+      <created>1665751275613</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665751275613</updated>
+    </task>
+    <task id="LOCAL-00016" summary="new deploy">
+      <created>1665751519409</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1665751519409</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add support local.properties">
+      <created>1665774693359</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1665774693359</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update .gitignore">
+      <created>1665774735772</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1665774735772</updated>
+    </task>
+    <task id="LOCAL-00019" summary="new jar">
+      <created>1665774903090</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1665774903090</updated>
+    </task>
+    <task id="LOCAL-00020" summary="init simple auth">
+      <created>1665840937688</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1665840937689</updated>
+    </task>
+    <task id="LOCAL-00021" summary="change generate jar settings">
+      <created>1665841586919</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1665841586919</updated>
+    </task>
+    <task id="LOCAL-00022" summary="init jar">
+      <created>1665841662692</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1665841662692</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update response signIn">
+      <created>1665845313820</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1665845313820</updated>
+    </task>
+    <task id="LOCAL-00024" summary="update jar">
+      <created>1665845471182</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1665845471182</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update signUp code error">
+      <created>1665935908896</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1665935908896</updated>
+    </task>
+    <task id="LOCAL-00026" summary="update jar">
+      <created>1665936241905</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1665936241905</updated>
+    </task>
+    <task id="LOCAL-00027" summary="update code error">
+      <created>1665936810152</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1665936810152</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="add jar" />
+    <MESSAGE value="add local.properties" />
+    <MESSAGE value="update local.properties" />
+    <MESSAGE value="update jars" />
+    <MESSAGE value="update" />
+    <MESSAGE value="remove local.properties" />
+    <MESSAGE value="deploy jar" />
+    <MESSAGE value="change serialization" />
+    <MESSAGE value="new deploy" />
+    <MESSAGE value="add support local.properties" />
+    <MESSAGE value="update .gitignore" />
+    <MESSAGE value="new jar" />
+    <MESSAGE value="init simple auth" />
+    <MESSAGE value="change generate jar settings" />
+    <MESSAGE value="init jar" />
+    <MESSAGE value="update response signIn" />
+    <MESSAGE value="update signUp code error" />
+    <MESSAGE value="update jar" />
+    <MESSAGE value="update code error" />
+    <option name="LAST_COMMIT_MESSAGE" value="update code error" />
+  </component>
+</project>
